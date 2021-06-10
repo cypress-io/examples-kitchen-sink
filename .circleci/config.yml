@@ -8,7 +8,7 @@
 version: 2.1
 orbs:
   # use Cypress orb from CircleCI registry
-  cypress: cypress-io/cypress@1.26.0
+  cypress: cypress-io/cypress@1.28.0
 
 executors:
   mac:
@@ -102,6 +102,8 @@ jobs:
           path: cypress\screenshots
       - store_artifacts:
           path: cypress\videos
+      - store_artifacts:
+          path: C:\ProgramData\chocolatey\logs\chocolatey.log
 
   win-test-firefox:
     working_directory: ~/app
